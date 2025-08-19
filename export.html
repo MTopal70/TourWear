@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Tourbericht</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    h1 { color: #336699; }
+    ul { padding-left: 1.2rem; }
+  </style>
+</head>
+<body>
+  <h1>Tourbericht:  {{ start }} → {{ ziel }}</h1>
+  <p><strong>Modus:</strong> {{ modus }}</p>
+  <p><strong>Dauer:</strong> {{ dauer }} Stunden</p>
+  <p><strong>Wetter Start:</strong> {{ wetter_start }}</p>
+  <p><strong>Wetter Ziel:</strong> {{ wetter_ziel }}</p>
+
+  <h2>🧠 GPT-Empfehlung</h2>
+  <p>{{ antwort|safe }}</p>
+
+  <h2>✅ Packliste</h2>
+  <ul>
+    {% for item in packliste %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
